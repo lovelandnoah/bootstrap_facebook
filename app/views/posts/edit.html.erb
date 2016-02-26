@@ -1,0 +1,13 @@
+<h1>Edit Post</h1>
+<button><%= link_to "Home", root_path %></button>
+<%= form_for @post do |f| %>
+	<%= f.label :author %>
+	<%= f.text_field :author %>
+
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :body %>
+	<%= f.text_area :body %>
+	<%= f.submit %>
+<% end %>

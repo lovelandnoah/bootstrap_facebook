@@ -1,0 +1,13 @@
+<h1 class="container">Boostrap Facebook</h1>
+	<div class="container"><button class=""><%= link_to "Create", new_post_path %></button></div>
+<div class="container">
+	<% @posts.each do |p| %>
+		<h2>Author: <%= p.author %></h2>
+		<br />
+		<h3>Title: <%= p.title %> </h3>
+		<br />
+		<h4><%= p.body %></h4>
+		<button class="btn btn-info text"><%= link_to "Show Page", post_path(p), class: "text" %></button>
+		<hr />
+	<% end %>
+</div>
